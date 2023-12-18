@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  background: #d9d9d9;
+  font-family: "Archivo", sans-serif;
+}
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  background: black;
+  height: 23rem;
+  width: 100%;
+  z-index: -1;
+}
+
+div.app {
+  margin: 0 auto;
+  max-width: 46rem;
+  height: 100%;
+}
+
+header {
+  padding-block: 5rem 2.63rem;
+  width: min(25rem);
+}
+header h1 {
+  margin-bottom: 1.5rem;
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.625rem;
+}
+header p {
+  color: #42d3ff;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+
+form {
+  padding: 4rem;
+  display: flex;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  background: #fafafc;
+  flex-direction: column;
+  gap: 3rem;
+}
+fieldset,
+div.fieldset-wrapper {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+div.fieldset-wrapper legend {
+  color: #32264d;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.125rem;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e6e6f0;
+}
+
+div.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-block: 1.5rem 0.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #4e4958;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+label span {
+  color: #c1bccc;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  margin-left: 0.75rem;
+}
+input,
+select {
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid#e6e6f0;
+  background: #fafafc;
+  padding-left: 1.5rem;
+}
+textarea {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Back-Lines-in-white, #e6e6f0);
+  background: var(--Shapes-02, #fafafc);
+}
+select {
+  color: #c1bccc;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.625rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+    no-repeat 98%;
+}
+
+div.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1rem;
+
+  position: relative;
+  margin-block: 1.5rem 0.5rem;
+}
+div.checkbox input {
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+}
+div.checkbox label {
+  margin: 0;
+}
+div.checkbox input + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 0.5rem;
+  border: 1px solid #e6e6f0;
+  background: #fafafc;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 1rem;
+}
+div.checkbox input:checked + label::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cg clip-path='url(%23clip0_1203_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1203_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+    no-repeat center;
+}
+div.checkbox input:focus + label::before {
+  outline: auto;
+}
+
+div.time {
+  display: flex;
+  gap: 1.25rem;
+}
+div.time > div.input-wrapper input {
+  color: #c1bccc;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+div.time > div.input-wrapper:nth-child(1) {
+  width: 100%;
+  flex-shrink: 1;
+}
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+}
+
+footer {
+  width: 46rem;
+  height: 8.5rem;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  background: #f0f0f4;
+  padding-block: 2.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-top: 0.0625rem solid #d6d6d6;
+  margin-bottom: 5.4rem;
+}
+
+footer button {
+  width: 38rem;
+  height: 3.5rem;
+  padding: 0.9375rem 2.5rem;
+  border-radius: 0.5rem;
+  background: #04d361;
+  border: none;
+
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625rem;
+
+  cursor: pointer;
+}
+
+input:invalid {
+  border-radius: 0.5rem;
+  border: 1px solid #ff1010;
+  background: #fafafc;
+}
