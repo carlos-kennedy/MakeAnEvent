@@ -19,4 +19,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🚧 Projeto
 
-O MakeAnEvent é um projeto criado apartir da segunda partedo módulo de HTML & CSS do Explorer.
+O MakeAnEvent é um projeto criado apartir da terceira parte do módulo de HTML & CSS do Explorer.
